@@ -1,0 +1,25 @@
+{
+	"name": "Bullhorn Extenion",
+	"version": "1.0",
+	"description": "Adds 314e additional bullhorn features",
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"page_action": {
+		"default_title": "BH Extra features"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://cls5.bullhornstaffing.com/BullhornSTAFFING/MainFrame*"],
+			"js": ["inject.js"]
+		}
+	],
+	"permissions": [
+		"declarativeContent",
+		"activeTab",
+		"tabs"
+	],
+	"web_accessible_resources": ["mainwindow.js"],
+	"manifest_version": 2
+}
